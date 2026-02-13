@@ -22,7 +22,7 @@ Copy files
 ```
 cd pikvm-kv401
 cp kv401.py /usr/local/bin/
-cp kv401.yaml /etc/kvmd/overrides.d/
+cp kv401.yaml /etc/kvmd/override.d/
 ```
 
 Restart kvmd
