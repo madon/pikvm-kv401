@@ -1,0 +1,39 @@
+kvmd:
+    gpio:
+        drivers:
+            kvm_switch_ch1:
+                type: cmd
+                cmd: ["/usr/local/bin/kvmswitch.py", "--port", "/dev/ttyUSB0", "1"]
+            kvm_switch_ch2:
+                type: cmd
+                cmd: ["/usr/local/bin/kvmswitch.py", "--port", "/dev/ttyUSB0", "2"]
+            kvm_switch_ch3:
+                type: cmd
+                cmd: ["/usr/local/bin/kvmswitch.py", "--port", "/dev/ttyUSB0", "3"]
+            kvm_switch_ch4:
+                type: cmd
+                cmd: ["/usr/local/bin/kvmswitch.py", "--port", "/dev/ttyUSB0", "4"]
+        scheme:
+            ch1:
+                driver: kvm_switch_ch1
+                pin: 0
+                mode: output
+            ch2:
+                driver: kvm_switch_ch2
+                pin: 0
+                mode: output
+            ch3:
+                driver: kvm_switch_ch3
+                pin: 0
+                mode: output
+            ch4:
+                driver: kvm_switch_ch4
+                pin: 0
+                mode: output
+        view:
+            table:
+                - ["#Input 1", "ch1"]
+                - ["#Input 2", "ch2"]
+                - ["#Input 3", "ch3"]
+                - ["#Input 4", "ch4"]
+
